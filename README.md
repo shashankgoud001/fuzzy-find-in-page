@@ -16,7 +16,7 @@ Follow these steps to get the extension running locally:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Venkatasai-102/fuzzy-find-in-page.git
+   git clone https://github.com/shashankgoud001/fuzzy-find-in-page.git
    ```
 2. Load into Chrome:
 - Open `Manage Extensions` page in the browser.
