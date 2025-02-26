@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Fuzzy Find Extension",
+    "version": "1.0",
+    "description": "Fuzzy search in page",
+    "permissions": [
+        "activeTab"
+    ],
+    "commands": {
+        "open-fuzzy-find": {
+            "suggested_key": {
+                "default": "Ctrl+I",
+                "mac": "Command+I"
+            },
+            "description": "Open fuzzy find input"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*",
+                "http://localhost/*",
+                "https://localhost/*",
+                "http://127.0.0.1/*",
+                "https://127.0.0.1/*",
+                "file://*/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
